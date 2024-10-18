@@ -14,16 +14,15 @@
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
 			rel="stylesheet"
 		/>
-
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
 		<link rel="stylesheet" href="styles/style.css" />
 		<title>LNG Invest Project</title>
 	</head>
 	<body>
 		<header class="header">
-			<canvas
-				id="canvas"
-				style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"
-			></canvas>
 			<div class="header__container">
 				<nav class="header__nav nav-header">
 					<a href="#" class="nav-header__logo">
@@ -42,6 +41,7 @@
 					<button class="header__button">Заказать звонок</button>
 				</div>
 			</div>
+			<div class="menu"></div>
 			<svg
 				class="header__bottom"
 				viewBox="0 0 491 17"
@@ -56,27 +56,267 @@
 					></path>
 				</g>
 			</svg>
+			<canvas
+				id="canvas"
+				style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"
+			></canvas>
 		</header>
-		<div class="stats">
-			<div class="stats__container">
-				<div class="stats__block">
-					<div class="stats__title">150K</div>
-					<p class="stats__descr">цифры о нас</p>
+		<main class="main">
+			<section class="stats">
+				<div class="stats__container">
+					<div class="stats__block">
+						<div class="stats__title">150K</div>
+						<p class="stats__descr">цифры о нас</p>
+					</div>
+					<div class="stats__block">
+						<div class="stats__title">10</div>
+						<p class="stats__descr">лет на рынке СПГ</p>
+					</div>
+					<div class="stats__block">
+						<div class="stats__title">198K</div>
+						<p class="stats__descr">LNG - самые первые</p>
+					</div>
+					<div class="stats__block">
+						<div class="stats__title">97K+</div>
+						<p class="stats__descr">больше всего у нас</p>
+					</div>
 				</div>
-				<div class="stats__block">
-					<div class="stats__title">10</div>
-					<p class="stats__descr">лет на рынке СПГ</p>
+			</section>
+			<section class="services">
+				<div class="services__container">
+					<h2 class="services__title">
+						Основные услуги <span class="services__title-back">мы создаем</span>
+					</h2>
+					<div class="slider-services__navigations">
+						<div class="slider-services__navigations-group">
+							<button
+								class="slider-services__arrow slider-services__arrow--prev"
+							>
+								←
+							</button>
+							<div class="slider-services__counter"></div>
+							<button
+								class="slider-services__arrow slider-services__arrow--next"
+							>
+								→
+							</button>
+						</div>
+					</div>
+					<div class="services__slider slider-services">
+						<div class="slider-services__swiper swiper">
+							<div class="slider-services__wrapper swiper-wrapper">
+								<div class="slider-services__slide swiper-slide">
+									<div class="slider-services__slide_img">
+										<img
+											src="img/services/slider/icon2.svg"
+											alt="проектирование и выполнение предпроектых работ"
+										/>
+									</div>
+									<h3 class="slider-services__slide_title">
+										Разработка обоснования инвестиций
+									</h3>
+								</div>
+								<div class="slider-services__slide swiper-slide">
+									<div class="slider-services__slide_img">
+										<img
+											src="img/services/slider/icon2.svg"
+											alt="проектирование и выполнение предпроектых работ"
+										/>
+									</div>
+									<h3 class="slider-services__slide_title">
+										Разработка обоснования инвестиций
+									</h3>
+								</div>
+								<div class="slider-services__slide swiper-slide">
+									<div class="slider-services__slide_img">
+										<img
+											src="img/services/slider/icon3.svg"
+											alt="проектирование и выполнение предпроектых работ"
+										/>
+									</div>
+									<h3 class="slider-services__slide_title">
+										Разработка обоснования инвестиций
+									</h3>
+								</div>
+								<div class="slider-services__slide swiper-slide">
+									<div class="slider-services__slide_img">
+										<img
+											src="img/services/slider/icon4.svg"
+											alt="проектирование и выполнение предпроектых работ"
+										/>
+									</div>
+									<h3 class="slider-services__slide_title">
+										Разработка обоснования инвестиций
+									</h3>
+								</div>
+								<div class="slider-services__slide swiper-slide">
+									<div class="slider-services__slide_img">
+										<img
+											src="img/services/slider/icon4.svg"
+											alt="проектирование и выполнение предпроектых работ"
+										/>
+									</div>
+									<h3 class="slider-services__slide_title">
+										Разработка обоснования инвестиций
+									</h3>
+								</div>
+								<div class="slider-services__slide swiper-slide">
+									<div class="slider-services__slide_img">
+										<img
+											src="img/services/slider/icon4.svg"
+											alt="проектирование и выполнение предпроектых работ"
+										/>
+									</div>
+									<h3 class="slider-services__slide_title">
+										Разработка обоснования инвестиций
+									</h3>
+								</div>
+								<div class="slider-services__slide swiper-slide">
+									<div class="slider-services__slide_img">
+										<img
+											src="img/services/slider/icon4.svg"
+											alt="проектирование и выполнение предпроектых работ"
+										/>
+									</div>
+									<h3 class="slider-services__slide_title">
+										Разработка обоснования инвестиций
+									</h3>
+								</div>
+								<div class="slider-services__slide swiper-slide">
+									<div class="slider-services__slide_img">
+										<img
+											src="img/services/slider/icon4.svg"
+											alt="проектирование и выполнение предпроектых работ"
+										/>
+									</div>
+									<h3 class="slider-services__slide_title">
+										Разработка обоснования инвестиций
+									</h3>
+								</div>
+								<div class="slider-services__slide swiper-slide">
+									<div class="slider-services__slide_img">
+										<img
+											src="img/services/slider/icon4.svg"
+											alt="проектирование и выполнение предпроектых работ"
+										/>
+									</div>
+									<h3 class="slider-services__slide_title">
+										Разработка обоснования инвестиций
+									</h3>
+								</div>
+								<div class="slider-services__slide swiper-slide">
+									<div class="slider-services__slide_img">
+										<img
+											src="img/services/slider/icon4.svg"
+											alt="проектирование и выполнение предпроектых работ"
+										/>
+									</div>
+									<h3 class="slider-services__slide_title">
+										Разработка обоснования инвестиций
+									</h3>
+								</div>
+								<div class="slider-services__slide swiper-slide">
+									<div class="slider-services__slide_img">
+										<img
+											src="img/services/slider/icon4.svg"
+											alt="проектирование и выполнение предпроектых работ"
+										/>
+									</div>
+									<h3 class="slider-services__slide_title">
+										Разработка обоснования инвестиций
+									</h3>
+								</div>
+								<div class="slider-services__slide swiper-slide">
+									<div class="slider-services__slide_img">
+										<img
+											src="img/services/slider/icon4.svg"
+											alt="проектирование и выполнение предпроектых работ"
+										/>
+									</div>
+									<h3 class="slider-services__slide_title">
+										Разработка обоснования инвестиций
+									</h3>
+								</div>
+							</div>
+						</div>
+						<div class="slider-services__pagination swiper-pagination"></div>
+					</div>
 				</div>
-				<div class="stats__block">
-					<div class="stats__title">198K</div>
-					<p class="stats__descr">LNG - самые первые</p>
+			</section>
+			<section class="steps">
+				<img
+					class="steps__bg steps__bg_left"
+					src="img/steps/bgLeft.svg"
+					alt="arrows"
+				/>
+				<img
+					class="steps__bg steps__bg_right"
+					src="img/steps/bgRight.svg"
+					alt="arrows"
+				/>
+				<div class="steps__container">
+					<div class="steps__left">
+						<h2 class="steps__title">Как<br />всё<br />работает</h2>
+					</div>
+					<div class="steps__right">
+						<div class="steps__item item-steps active">
+							<div class="item-steps__number">1.</div>
+							<div class="item-steps__content">
+								<div class="item-steps__step-num">Step 01</div>
+								<h3 class="item-steps__title">Выбирайте</h3>
+								<p class="item-steps__descr">
+									ООО «СПГ ИнвестПроект» стало генеральным подрядчиком по
+									строительству первой линии комплекса СПГ в ТОР «Надеждинская»
+								</p>
+							</div>
+						</div>
+						<div class="steps__item item-steps">
+							<div class="item-steps__number">2.</div>
+							<div class="item-steps__content">
+								<div class="item-steps__step-num">Step 02</div>
+								<h3 class="item-steps__title">Присылайте заявку</h3>
+								<p class="item-steps__descr">
+									ООО «СПГ ИнвестПроект» стало генеральным подрядчиком по
+									строительству первой линии комплекса СПГ в ТОР «Надеждинская»
+								</p>
+							</div>
+						</div>
+						<div class="steps__item item-steps">
+							<div class="item-steps__number">3.</div>
+							<div class="item-steps__content">
+								<div class="item-steps__step-num">Step 03</div>
+								<h3 class="item-steps__title">Подтверждайте</h3>
+								<p class="item-steps__descr">
+									ООО «СПГ ИнвестПроект» стало генеральным подрядчиком по
+									строительству первой линии комплекса СПГ в ТОР «Надеждинская»
+								</p>
+							</div>
+						</div>
+						<div class="steps__item item-steps">
+							<div class="item-steps__number">4.</div>
+							<div class="item-steps__content">
+								<div class="item-steps__step-num">Step 04</div>
+								<h3 class="item-steps__title">Готовый продукт</h3>
+								<p class="item-steps__descr">
+									ООО «СПГ ИнвестПроект» стало генеральным подрядчиком по
+									строительству первой линии комплекса СПГ в ТОР «Надеждинская»
+								</p>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="stats__block">
-					<div class="stats__title">97K+</div>
-					<p class="stats__descr">больше всего у нас</p>
+			</section>
+			<section class="portfolio">
+				<div class="portfolio__container">
+					<h2 class="portfolio__title">Реализация<br />проектов</h2>
+					<p class="portfolio__subtitle">
+						Полный цикл в области криогенных технологий
+					</p>
+					<button class="portfolio__button">Портфолио</button>
 				</div>
-			</div>
-		</div>
+			</section>
+		</main>
 	</body>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script src="js/index.js"></script>
 </html>
