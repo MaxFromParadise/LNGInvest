@@ -226,12 +226,12 @@ header.header {
 	font-weight: 400;
 	margin-bottom: 40px;
 	z-index: 20;
+	letter-spacing: 5px;
 }
 .button {
 	border: none;
 	padding: 20px 58px;
 	background: #0effd6;
-	border: 1px solid #0075c9;
 	border-radius: 30px;
 	cursor: pointer;
 	color: #001287;
@@ -246,6 +246,7 @@ header.header {
 /* stats */
 .stats {
 	padding-top: 35px;
+	overflow: hidden;
 }
 .stats__container {
 	display: flex;
@@ -262,11 +263,14 @@ header.header {
 	text-align: center;
 }
 .stats__title {
-	color: #1d249f;
+	color: #166395;
 	font-family: Inter;
 	font-size: 60px;
 	font-weight: 400;
+	position: relative;
+	z-index: 10;
 }
+
 .stats__descr {
 	color: #4d4d4d;
 	font-size: 0.875rem;
@@ -397,7 +401,6 @@ header.header {
 	margin-bottom: 120px;
 	background: url('../img/steps/stepsBG2.jpg') no-repeat center center;
 	background-size: 100% 100%;
-	/* min-height: 150vh; */
 }
 .steps__bg {
 	width: 100%;
@@ -420,7 +423,16 @@ header.header {
 	line-height: normal;
 	position: sticky;
 	top: 35%;
-	/* transform: translateY(-50%); */
+}
+.steps__title_back {
+	position: absolute;
+	left: -2rem;
+	top: -2.5rem;
+	color: #cbcbcb;
+	font-size: 7.5rem;
+	font-weight: 900;
+	z-index: -1;
+	opacity: 0.3;
 }
 .steps__right {
 	display: flex;
@@ -437,6 +449,7 @@ header.header {
 	display: flex;
 	gap: 1rem;
 	color: #808080;
+	z-index: 10;
 }
 .item-steps__number {
 	color: #b1b1b1;
@@ -477,14 +490,20 @@ header.header {
 	padding-bottom: 100px;
 	position: relative;
 	min-height: 100vh;
+	overflow: hidden;
 }
-.portfolio__descr {
+.portfolio__title {
+	position: relative;
+	z-index: 10;
+}
+.portfolio__title_back {
 	position: absolute;
-	left: 0;
-	top: 150px;
+	left: -6.3rem;
+	top: -3rem;
 	color: #fff;
-	font-size: 120px;
+	font-size: 7.5rem;
 	font-weight: 900;
+	z-index: -1;
 	opacity: 0.2;
 }
 .button-outline {
@@ -513,8 +532,7 @@ header.header {
 .team__flex {
 	display: flex;
 	align-self: flex-end;
-	/* justify-content: center; */
-	margin-left: 30px;
+	margin-left: 60px;
 	height: 100%;
 	gap: 10px;
 }
@@ -559,10 +577,7 @@ header.header {
 	font-weight: 900;
 	z-index: -1;
 }
-.team__button {
-	color: #0075c9;
-	border-color: #0075c9;
-}
+
 /* warranty */
 .warranty {
 	background: url('../img/warranty/warrantyBG.jpg') no-repeat center center;
@@ -899,6 +914,9 @@ header.header {
 	.steps__title {
 		text-align: center;
 	}
+	.steps__title_back {
+		display: none;
+	}
 	.item-steps {
 		flex-direction: column;
 	}
@@ -914,6 +932,7 @@ header.header {
 		align-items: start;
 		gap: 40px;
 		flex-direction: column-reverse;
+		margin-left: 0;
 	}
 	.team__img {
 		align-self: flex-start;
