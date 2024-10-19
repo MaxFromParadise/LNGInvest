@@ -1,72 +1,31 @@
 'use strict';
 
 const burger = document.querySelector('.burger');
+const menu = document.querySelector('.menu');
+const overlay = document.querySelector('.overlay');
+const body = document.body;
 
 burger.addEventListener('click', () => {
 	burger.classList.toggle('open');
+	menu.classList.toggle('open');
+	overlay.style.display = menu.classList.contains('open') ? 'block' : 'none';
+	body.classList.toggle('lock', menu.classList.contains('open'));
 });
 
-// const canvas = document.getElementById('canvas');
-// const ctx = canvas.getContext('2d');
-// canvas.width = window.innerWidth;
-// canvas.height = window.innerHeight;
-
-// const circles = [];
-// const numCircles = window.innerWidth < 767 ? 5 : 35; // Изменяем количество шариков
-
-// for (let i = 0; i < numCircles; i++) {
-// 	const x = Math.random() * canvas.width;
-// 	const y = Math.random() * canvas.height;
-// 	circles.push({
-// 		originalX: x,
-// 		originalY: y,
-// 		x: x,
-// 		y: y,
-// 		radius: Math.random() * 80 + 40,
-// 		color: '#0175CA',
-// 		speed: 5,
-// 	});
-// }
-
-// const header = document.querySelector('header.header');
-// header.addEventListener('mousemove', (e) => {
-// 	circles.forEach((circle) => {
-// 		const dx = e.clientX - circle.x;
-// 		const dy = e.clientY - circle.y;
-// 		const distance = Math.sqrt(dx * dx + dy * dy);
-
-// 		if (distance < 300) {
-// 			const angle = Math.atan2(dy, dx);
-// 			circle.x -= Math.cos(angle) * circle.speed; // Отдаляем от курсора
-// 			circle.y -= Math.sin(angle) * circle.speed; // Отдаляем от курсора
-// 		} else {
-// 			circle.x += (circle.originalX - circle.x) * 0.1;
-// 			circle.y += (circle.originalY - circle.y) * 0.1;
-// 		}
-// 	});
-// });
-
-// function draw() {
-// 	ctx.clearRect(0, 0, canvas.width, canvas.height);
-// 	circles.forEach((circle) => {
-// 		ctx.beginPath();
-// 		ctx.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 2);
-// 		ctx.fillStyle = circle.color;
-// 		ctx.fill();
-// 	});
-// 	requestAnimationFrame(draw);
-// }
-
-// draw();
+// Закрытие меню при клике вне его
+overlay.addEventListener('click', () => {
+	burger.classList.remove('open');
+	menu.classList.remove('open');
+	overlay.style.display = 'none';
+	body.classList.remove('lock');
+});
 
 document.addEventListener('DOMContentLoaded', function () {
 	const swiper = new Swiper('.slider-services__swiper', {
 		slidesPerView: 3,
-		// freemode: {
-		// 	enabled: true,
-		// },
 		slidesPerGroup: 3,
 		spaceBetween: 20,
+		speed: 600,
 		navigation: {
 			nextEl: '.slider-services__arrow--next',
 			prevEl: '.slider-services__arrow--prev',
@@ -74,19 +33,29 @@ document.addEventListener('DOMContentLoaded', function () {
 		pagination: {
 			el: '.slider-services__pagination',
 			clickable: true,
+			dynamicBullets: true,
 		},
 		breakpoints: {
 			0: {
 				slidesPerView: 1,
 				slidesPerGroup: 1,
+				pagination: {
+					dynamicBullets: true,
+				},
 			},
 			680: {
 				slidesPerView: 2,
 				slidesPerGroup: 2,
+				pagination: {
+					dynamicBullets: false,
+				},
 			},
 			768: {
 				slidesPerView: 3,
 				slidesPerGroup: 3,
+				pagination: {
+					dynamicBullets: false,
+				},
 			},
 		},
 		on: {
@@ -113,11 +82,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		entries.forEach((entry) => {
 			const item = entry.target;
 			if (entry.isIntersecting) {
-				// Удаляем класс active у всех элементов
 				document
 					.querySelectorAll('.steps__item')
 					.forEach((el) => el.classList.remove('active'));
-				// Добавляем класс active к текущему элементу
 				item.classList.add('active');
 			}
 		});
