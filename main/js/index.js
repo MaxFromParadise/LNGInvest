@@ -12,7 +12,6 @@ burger.addEventListener('click', () => {
 	body.classList.toggle('lock', menu.classList.contains('open'));
 });
 
-// Закрытие меню при клике вне его
 overlay.addEventListener('click', () => {
 	burger.classList.remove('open');
 	menu.classList.remove('open');
@@ -63,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				const total = this.slides.length; // Общее количество слайдов
 				const current =
 					Math.floor(this.activeIndex / this.params.slidesPerView) + 1; // Текущий слайд
-				const totalSlidesInView = Math.ceil(total / this.params.slidesPerView); // Всего групп слайдов
+				const totalSlidesInView = Math.ceil(total / this.params.slidesPerView);
 
 				document.querySelector(
 					'.slider-services__counter'
@@ -71,25 +70,23 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 		},
 	});
+});
+document.addEventListener('scroll', function () {
+	const stepsItems = document.querySelectorAll('.item-steps');
+	const windowHeight = window.innerHeight;
 
-	const options = {
-		root: null,
-		rootMargin: '0px',
-		threshold: 1,
-	};
+	stepsItems.forEach((item) => {
+		const rect = item.getBoundingClientRect();
+		const itemCenter = rect.top + rect.height / 2;
+		const windowCenter = windowHeight / 2;
 
-	const observer = new IntersectionObserver((entries) => {
-		entries.forEach((entry) => {
-			const item = entry.target;
-			if (entry.isIntersecting) {
-				document
-					.querySelectorAll('.steps__item')
-					.forEach((el) => el.classList.remove('active'));
-				item.classList.add('active');
-			}
-		});
-	}, options);
-
-	const items = document.querySelectorAll('.steps__item');
-	items.forEach((item) => observer.observe(item));
+		// Проверяем, находится ли центр item-steps в пределах центра экрана
+		if (Math.abs(itemCenter - windowCenter) < 50) {
+			// 50 — допустимое отклонение
+			// Удаляем класс active у всех items
+			stepsItems.forEach((i) => i.classList.remove('active'));
+			// Добавляем класс active к текущему item
+			item.classList.add('active');
+		}
+	});
 });

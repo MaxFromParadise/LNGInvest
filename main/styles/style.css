@@ -227,14 +227,14 @@ header.header {
 	margin-bottom: 40px;
 	z-index: 20;
 }
-.header__button {
+.button {
 	border: none;
 	padding: 20px 58px;
-	background: #fff;
+	background: #0effd6;
 	border: 1px solid #0075c9;
 	border-radius: 30px;
 	cursor: pointer;
-	color: #0075c9;
+	color: #001287;
 	font-size: 1.5rem;
 	font-weight: 500;
 	-webkit-box-shadow: 10px 10px 17px -8px rgba(0, 0, 0, 0.75);
@@ -387,7 +387,7 @@ header.header {
 }
 .swiper-pagination-bullet-active {
 	width: 33px;
-	background: #b1b1b1;
+	background: #001287;
 	border-radius: 5px;
 }
 /* steps */
@@ -463,10 +463,10 @@ header.header {
 	color: #808080;
 }
 .item-steps.active {
-	color: #0075c9;
+	color: #4bc1db;
 }
 .item-steps.active .item-steps__number {
-	color: #0075c9;
+	color: #4bc1db;
 }
 /* portfolio */
 .portfolio {
@@ -551,13 +551,13 @@ header.header {
 }
 .team__title_back {
 	position: absolute;
-	display: block;
 	opacity: 0.3;
 	left: 0;
 	top: 0;
 	color: #fff;
 	font-size: 120px;
 	font-weight: 900;
+	z-index: -1;
 }
 .team__button {
 	color: #0075c9;
@@ -835,11 +835,12 @@ header.header {
 	margin: 0 auto;
 }
 /* hover */
-.header__button:hover {
-	background: #c5c8ca;
+.button:hover {
+	background: #0075c9;
+	color: #0effd4;
 }
 .slider-services__slide:hover {
-	background: #0075c9;
+	background: #1e23ac;
 }
 .slider-services__slide:hover .slider-services__slide_title {
 	color: #fff;
