@@ -958,7 +958,7 @@ header.header {
 @media (max-width: 680px) {
 	.slider-services__pagination {
 		width: 100% !important;
-		transform: translateX(25%) !important;
+		transform: translateX(18%) !important;
 	}
 	.footer__decoration {
 		display: none;
