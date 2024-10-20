@@ -213,8 +213,7 @@ header.header {
 .header__title {
 	padding-top: 90px;
 	color: #fff;
-	font-family: Letov;
-	/* font-size: 120px; */
+	font-family: 'Letov';
 	font-size: clamp(1.875rem, calc(0.0383rem + 9.1837vw), 7.5rem);
 	font-weight: 400;
 	margin-bottom: 30px;
@@ -269,7 +268,7 @@ header.header {
 }
 .stats__title {
 	color: #2731a4;
-	font-family: Letov;
+	font-family: 'Letov';
 	font-size: 60px;
 	font-weight: 400;
 	position: relative;
@@ -295,7 +294,7 @@ header.header {
 }
 .services__title {
 	color: #1825aa;
-	font-family: Letov;
+	font-family: 'Letov';
 	font-size: clamp(2rem, calc(1.2245rem + 3.8776vw), 4.375rem);
 	font-weight: 400;
 	position: relative;
@@ -342,7 +341,7 @@ header.header {
 
 .slider-services__counter {
 	color: #808080;
-	font-family: Letov;
+	font-family: 'Letov';
 	font-size: 1rem;
 	font-weight: 400;
 }
@@ -424,7 +423,7 @@ header.header {
 	color: #18258f;
 	-webkit-text-stroke-width: 1;
 	-webkit-text-stroke-color: #1825aa;
-	font-family: Letov;
+	font-family: 'Letov';
 	font-size: clamp(2.25rem, calc(1.5561rem + 3.4694vw), 4.375rem);
 	font-style: normal;
 	font-weight: 400;
@@ -461,7 +460,7 @@ header.header {
 }
 .item-steps__number {
 	color: #b1b1b1;
-	font-family: Letov;
+	font-family: 'Letov';
 	font-size: 70px;
 	font-weight: 400;
 	transition: color 0.3s ease 0s;
@@ -503,7 +502,7 @@ header.header {
 .portfolio__title {
 	position: relative;
 	z-index: 10;
-	font-family: Letov;
+	font-family: 'Letov';
 }
 .portfolio__title_back {
 	position: absolute;
@@ -563,7 +562,7 @@ header.header {
 	color: #000003;
 	-webkit-text-stroke-width: 1;
 	-webkit-text-stroke-color: #000003;
-	font-family: Letov;
+	font-family: 'Letov';
 	font-size: clamp(2rem, calc(1.2245rem + 3.8776vw), 4.375rem);
 	font-weight: 400;
 	margin-bottom: 20px;
@@ -607,7 +606,7 @@ header.header {
 	color: #fff;
 	-webkit-text-stroke-width: 1;
 	-webkit-text-stroke-color: #fff;
-	font-family: Letov;
+	font-family: 'Letov';
 	font-size: clamp(2.25rem, calc(1.5561rem + 3.4694vw), 4.375rem);
 	font-weight: 400;
 	position: relative;
@@ -664,7 +663,7 @@ header.header {
 	min-height: 100vh;
 }
 .partners__title {
-	font-family: Letov;
+	font-family: 'Letov';
 	position: relative;
 }
 .partners__title_back {
@@ -686,7 +685,7 @@ header.header {
 	color: #1825aa;
 	-webkit-text-stroke-width: 1;
 	-webkit-text-stroke-color: #1825aa;
-	font-family: Letov;
+	font-family: 'Letov';
 	font-size: clamp(2.25rem, calc(1.5561rem + 3.4694vw), 4.375rem);
 	font-weight: 400;
 	margin-bottom: 90px;
@@ -850,7 +849,7 @@ header.header {
 	background: #1d2777;
 	padding: 1.4rem 1rem;
 	color: #0075c9;
-	font-family: Letov;
+	font-family: 'Letov';
 	font-size: 0.75rem;
 	font-weight: 400;
 }

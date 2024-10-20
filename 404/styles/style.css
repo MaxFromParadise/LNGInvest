@@ -206,8 +206,7 @@ header.header {
 .header__title {
 	padding-top: 90px;
 	color: #fff;
-	font-family: Letov;
-	/* font-size: 120px; */
+	font-family: 'Letov';
 	font-size: clamp(5rem, calc(3.7755rem + 6.1224vw), 8.75rem);
 	font-style: normal;
 	font-weight: 400;
@@ -230,7 +229,7 @@ header.header {
 	margin-bottom: 2rem;
 	z-index: 20;
 	letter-spacing: 5px;
-	font-family: Letov;
+	font-family: 'Letov';
 }
 .button {
 	border: none;
@@ -345,7 +344,7 @@ header.header {
 	background: #1d2777;
 	padding: 1.4rem 1rem;
 	color: #0075c9;
-	font-family: Letov;
+	font-family: 'Letov';
 	font-size: 0.75rem;
 	font-weight: 400;
 }
