@@ -8,7 +8,7 @@ const body = document.body;
 burger.addEventListener('click', () => {
 	burger.classList.toggle('open');
 	menu.classList.toggle('open');
-	overlay.style.display = menu.classList.contains('open') ? 'block' : 'none';
+	overlay.style.display = menu.classList.contains('open') ? 'flex' : 'none';
 	body.classList.toggle('lock', menu.classList.contains('open'));
 });
 
