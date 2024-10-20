@@ -1,3 +1,9 @@
+@font-face {
+	font-family: 'Letov';
+	src: url('../fonts/Letov.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
 * {
 	margin: 0;
 	padding: 0;
@@ -208,9 +214,9 @@ header.header {
 .header__title {
 	padding-top: 90px;
 	color: #fff;
-	font-family: Inter;
+	font-family: Letov;
 	/* font-size: 120px; */
-	font-size: clamp(1.625rem, calc(1.0332rem + 7.9592vw), 7.5rem);
+	font-size: clamp(1.875rem, calc(0.0383rem + 9.1837vw), 7.5rem);
 	font-weight: 400;
 	margin-bottom: 30px;
 }
@@ -263,8 +269,8 @@ header.header {
 	text-align: center;
 }
 .stats__title {
-	color: #166395;
-	font-family: Inter;
+	color: #2731a4;
+	font-family: Letov;
 	font-size: 60px;
 	font-weight: 400;
 	position: relative;
@@ -290,7 +296,7 @@ header.header {
 }
 .services__title {
 	color: #1825aa;
-	font-family: Inter;
+	font-family: Letov;
 	font-size: clamp(2rem, calc(1.2245rem + 3.8776vw), 4.375rem);
 	font-weight: 400;
 	position: relative;
@@ -328,13 +334,16 @@ header.header {
 	border: none;
 	border: 1px solid #808080;
 	border-radius: 20px;
+	font-size: 1.5rem;
 	background: transparent;
 	color: #808080;
 	cursor: pointer;
+	transition: border 0.3s ease 0s, color 0.3s ease 0s;
 }
+
 .slider-services__counter {
 	color: #808080;
-	font-family: Inter;
+	font-family: Letov;
 	font-size: 1rem;
 	font-weight: 400;
 }
@@ -416,7 +425,7 @@ header.header {
 	color: #18258f;
 	-webkit-text-stroke-width: 1;
 	-webkit-text-stroke-color: #1825aa;
-	font-family: Inter;
+	font-family: Letov;
 	font-size: clamp(2.25rem, calc(1.5561rem + 3.4694vw), 4.375rem);
 	font-style: normal;
 	font-weight: 400;
@@ -453,7 +462,7 @@ header.header {
 }
 .item-steps__number {
 	color: #b1b1b1;
-	font-family: Inter;
+	font-family: Letov;
 	font-size: 70px;
 	font-weight: 400;
 	transition: color 0.3s ease 0s;
@@ -495,6 +504,7 @@ header.header {
 .portfolio__title {
 	position: relative;
 	z-index: 10;
+	font-family: Letov;
 }
 .portfolio__title_back {
 	position: absolute;
@@ -551,10 +561,10 @@ header.header {
 	object-fit: contain;
 }
 .team__title {
-	color: #0075c9;
+	color: #000003;
 	-webkit-text-stroke-width: 1;
-	-webkit-text-stroke-color: #0075c9;
-	font-family: Inter;
+	-webkit-text-stroke-color: #000003;
+	font-family: Letov;
 	font-size: clamp(2rem, calc(1.2245rem + 3.8776vw), 4.375rem);
 	font-weight: 400;
 	margin-bottom: 20px;
@@ -563,7 +573,7 @@ header.header {
 }
 .team__subtitle {
 	font-size: clamp(1.75rem, calc(1.5867rem + 0.8163vw), 2.25rem);
-	color: #0075c9;
+	color: #000003;
 	font-weight: 300;
 	margin-bottom: 3.5rem;
 }
@@ -598,7 +608,7 @@ header.header {
 	color: #fff;
 	-webkit-text-stroke-width: 1;
 	-webkit-text-stroke-color: #fff;
-	font-family: Inter;
+	font-family: Letov;
 	font-size: clamp(2.25rem, calc(1.5561rem + 3.4694vw), 4.375rem);
 	font-weight: 400;
 	position: relative;
@@ -655,6 +665,7 @@ header.header {
 	min-height: 100vh;
 }
 .partners__title {
+	font-family: Letov;
 	position: relative;
 }
 .partners__title_back {
@@ -676,7 +687,7 @@ header.header {
 	color: #1825aa;
 	-webkit-text-stroke-width: 1;
 	-webkit-text-stroke-color: #1825aa;
-	font-family: Inter;
+	font-family: Letov;
 	font-size: clamp(2.25rem, calc(1.5561rem + 3.4694vw), 4.375rem);
 	font-weight: 400;
 	margin-bottom: 90px;
@@ -840,7 +851,7 @@ header.header {
 	background: #1d2777;
 	padding: 1.4rem 1rem;
 	color: #0075c9;
-	font-family: Inter;
+	font-family: Letov;
 	font-size: 0.75rem;
 	font-weight: 400;
 }
@@ -856,6 +867,10 @@ header.header {
 }
 .slider-services__slide:hover {
 	background: #1e23ac;
+}
+.slider-services__arrow:hover {
+	border: 1px solid #2731a4;
+	color: #2731a4;
 }
 .slider-services__slide:hover .slider-services__slide_title {
 	color: #fff;
