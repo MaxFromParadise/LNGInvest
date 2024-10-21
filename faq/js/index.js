@@ -4,6 +4,7 @@ const burger = document.querySelector('.burger');
 const menu = document.querySelector('.menu');
 const overlay = document.querySelector('.overlay');
 const body = document.body;
+const faqItems = document.querySelectorAll('.faq__item');
 
 burger.addEventListener('click', () => {
 	burger.classList.toggle('open');
@@ -19,74 +20,21 @@ overlay.addEventListener('click', () => {
 	body.classList.remove('lock');
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-	const swiper = new Swiper('.slider-services__swiper', {
-		slidesPerView: 3,
-		slidesPerGroup: 3,
-		spaceBetween: 20,
-		speed: 600,
-		navigation: {
-			nextEl: '.slider-services__arrow--next',
-			prevEl: '.slider-services__arrow--prev',
-		},
-		pagination: {
-			el: '.slider-services__pagination',
-			clickable: true,
-			dynamicBullets: true,
-		},
-		breakpoints: {
-			0: {
-				slidesPerView: 1,
-				slidesPerGroup: 1,
-				pagination: {
-					dynamicBullets: true,
-				},
-			},
-			680: {
-				slidesPerView: 2,
-				slidesPerGroup: 2,
-				pagination: {
-					dynamicBullets: false,
-				},
-			},
-			768: {
-				slidesPerView: 3,
-				slidesPerGroup: 3,
-				pagination: {
-					dynamicBullets: false,
-				},
-			},
-		},
-		on: {
-			slideChange: function () {
-				const total = this.slides.length; // Общее количество слайдов
-				const current =
-					Math.floor(this.activeIndex / this.params.slidesPerView) + 1; // Текущий слайд
-				const totalSlidesInView = Math.ceil(total / this.params.slidesPerView);
+// faq
+faqItems.forEach((item) => {
+	item.addEventListener('click', () => {
+		faqItems.forEach((innerItem) => {
+			if (innerItem !== item) {
+				innerItem.classList.remove('faq__item--active');
+				innerItem.querySelector('.faq__answer').style.maxHeight = null;
+			}
+		});
 
-				document.querySelector(
-					'.slider-services__counter'
-				).textContent = `${current} / ${totalSlidesInView}`;
-			},
-		},
-	});
-});
-document.addEventListener('scroll', function () {
-	const stepsItems = document.querySelectorAll('.item-steps');
-	const windowHeight = window.innerHeight;
-
-	stepsItems.forEach((item) => {
-		const rect = item.getBoundingClientRect();
-		const itemCenter = rect.top + rect.height / 2;
-		const windowCenter = windowHeight / 2;
-
-		// Проверяем, находится ли центр item-steps в пределах центра экрана
-		if (Math.abs(itemCenter - windowCenter) < 50) {
-			// 50 — допустимое отклонение
-			// Удаляем класс active у всех items
-			stepsItems.forEach((i) => i.classList.remove('active'));
-			// Добавляем класс active к текущему item
-			item.classList.add('active');
+		if (item.classList.contains('faq__item--active')) {
+			item.classList.remove('faq__item--active');
+			item.querySelector('.faq__answer').style.maxHeight = null;
+		} else {
+			item.classList.add('faq__item--active');
 		}
 	});
 });
