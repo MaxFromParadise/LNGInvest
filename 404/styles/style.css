@@ -203,8 +203,10 @@ header.header {
 	transform: rotate(-45deg);
 	top: 28px;
 }
+.header__container {
+	height: 100%;
+}
 .header__title {
-	padding-top: 90px;
 	color: #fff;
 	font-family: 'Letov';
 	font-size: clamp(5rem, calc(3.7755rem + 6.1224vw), 8.75rem);
@@ -216,11 +218,13 @@ header.header {
 	width: 100%;
 	position: relative;
 	z-index: 20;
+	height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 	text-align: center;
+	padding-top: 50px;
 }
 .header__descr {
 	color: #fff;
