@@ -133,10 +133,12 @@ header.header {
 	background: url('../img/header/headerBG.jpg') no-repeat center center;
 	background-size: contain;
 	position: relative;
+	mask-image: url(../img/header/mask.png);
+	mask-size: 100% 100%;
 	background-color: #1824aa;
-	padding-bottom: 80px;
-	border-bottom-right-radius: 50% 70px;
-	border-bottom-left-radius: 50% 70px;
+	padding-bottom: 180px;
+	/* border-bottom-right-radius: 50% 70px;
+	border-bottom-left-radius: 50% 70px; */
 }
 .header__nav {
 	padding-top: 60px;
@@ -148,6 +150,8 @@ header.header {
 	display: flex;
 	align-items: center;
 	gap: 1.875rem;
+	position: relative;
+	z-index: 100;
 }
 .nav-header__logo {
 	position: relative;
@@ -207,7 +211,6 @@ header.header {
 	top: 28px;
 }
 .header__title {
-	padding-top: 90px;
 	color: #fff;
 	font-family: 'Letov';
 	font-size: clamp(1.875rem, calc(0.0383rem + 9.1837vw), 7.5rem);
@@ -219,6 +222,7 @@ header.header {
 	width: min-content;
 	position: relative;
 	z-index: 20;
+	padding-top: 90px;
 }
 .header__descr {
 	color: #fff;
@@ -230,9 +234,9 @@ header.header {
 }
 .button {
 	border: none;
-	padding: 20px 58px;
+	padding: 21px 58px;
 	background: #0effd6;
-	border-radius: 30px;
+	border-radius: 3rem;
 	cursor: pointer;
 	color: #001287;
 	font-size: 1.5rem;
@@ -279,11 +283,10 @@ header.header {
 /* services */
 .services {
 	padding-top: 180px;
-	/* overflow: hidden; */
+	overflow: hidden;
 }
 .services__container {
 	position: relative;
-	overflow: hidden;
 }
 .slider-services__pagination {
 	bottom: -20px;
@@ -307,6 +310,7 @@ header.header {
 	opacity: 0.3;
 	text-wrap: nowrap;
 	z-index: -1;
+	text-transform: uppercase;
 }
 .slider-services__swiper {
 	margin-bottom: 40px;
@@ -503,10 +507,31 @@ header.header {
 	min-height: 1000px;
 	overflow: hidden;
 }
+.portfolio__container {
+	position: relative;
+}
+.portfolio__button {
+	position: relative;
+	z-index: 20;
+}
+.portfolio__right {
+	position: absolute;
+	right: -5px;
+	top: 0;
+	z-index: 0;
+}
+.portfolio__right svg {
+	height: 100%;
+	object-fit: fill;
+}
 .portfolio__title {
 	position: relative;
 	z-index: 10;
 	font-family: 'Letov';
+}
+.subtitle {
+	position: relative;
+	z-index: 20;
 }
 .portfolio__title_back {
 	position: absolute;
@@ -519,6 +544,7 @@ header.header {
 	z-index: -1;
 	opacity: 0.1;
 	text-transform: uppercase;
+	z-index: 20;
 }
 .button-outline {
 	background: transparent;
@@ -658,9 +684,10 @@ header.header {
 }
 /* partners */
 .partners {
-	background: url('../img/partners/partnersBG.jpg') no-repeat center center;
+	background: url('../img/partners/partnersBG.jpg') no-repeat center top;
 	background-size: cover;
 	background-color: #0175c9;
+	background-attachment: fixed;
 	min-height: 1000px;
 	overflow: hidden;
 	padding-top: 100px;
@@ -912,7 +939,7 @@ header.header {
 	opacity: 1;
 }
 .item-news:hover .item-news__img img {
-	scale: 1.06;
+	scale: 1.1;
 }
 .item-news:hover .item-news__icon_hover {
 	opacity: 1;
