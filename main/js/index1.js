@@ -90,24 +90,14 @@ const statsTitles = document.querySelectorAll('.stats__title');
 function animateNumbers() {
 	if (hasAnimated) return;
 
-	const targetValues = [150, 10, 198, 97]; // Целевые значения
-	const statsTitles = document.querySelectorAll('.stats__title');
-
-	statsTitles.forEach((title, index) => {
-		const target = targetValues[index]; // Берем значение из массива
+	statsTitles.forEach((title) => {
+		const target = +title.getAttribute('data-target');
 		let count = 0;
 		const increment = Math.ceil(target / 100);
 
 		const updateCount = () => {
 			count = Math.min(count + increment, target);
 			title.textContent = count.toLocaleString();
-
-			// Добавляем "К" к элементам 1 и 3
-			if (index === 0 || index === 2) {
-				title.textContent += 'K';
-			} else if (index === 3) {
-				title.textContent += 'K+';
-			}
 
 			if (count < target) {
 				requestAnimationFrame(updateCount);
@@ -123,12 +113,6 @@ function animateNumbers() {
 document.addEventListener('scroll', function () {
 	handleStepItems();
 	handleStatsAnimation();
-	const scrollPosition = window.scrollY;
-
-	const sky = document.querySelector('.portfolio__sky img');
-
-	// Изменение позиции фона в зависимости от прокрутки
-	sky.style.transform = `translateY(-${scrollPosition * 0.1}px)`;
 });
 
 // Handle active step items based on scroll position
@@ -153,8 +137,7 @@ function handleStatsAnimation() {
 	const sectionTop = statsSection.getBoundingClientRect().top;
 	const windowHeight = window.innerHeight;
 
-	if (sectionTop < windowHeight - 100 && !hasAnimated) {
+	if (sectionTop < windowHeight && !hasAnimated) {
 		animateNumbers();
 	}
 }
-handleStatsAnimation();
