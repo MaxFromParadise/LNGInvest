@@ -129,6 +129,71 @@ document.addEventListener('scroll', function () {
 
 	// Изменение позиции фона в зависимости от прокрутки
 	sky.style.transform = `translateY(-${scrollPosition * 0.1}px)`;
+
+	// team
+	const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+	// Получаем секцию и её координаты
+	const section = document.querySelector('.team');
+	const sectionTop = section.offsetTop;
+	const sectionHeight = section.offsetHeight;
+
+	// Проверяем, находится ли пользователь в пределах секции
+	if (
+		scrollTop >= sectionTop - window.innerHeight &&
+		scrollTop <= sectionTop + sectionHeight
+	) {
+		// Получаем все элементы с классом team__parallax
+		const parallaxElements = document.querySelectorAll('.team__parallax');
+
+		// Проходим по каждому элементу
+		parallaxElements.forEach((element, index) => {
+			// Коэффициент смещения для каждого элемента может быть разным
+			let offset =
+				index % 2 === 0
+					? (scrollTop - sectionTop) * 0.05
+					: (scrollTop - sectionTop) * -0.05;
+
+			// Применяем трансформацию на оси Y (вверх или вниз)
+			element.style.transform = `translateY(${offset}px)`;
+		});
+	}
+});
+// team
+// Определяем переменную section для использования внутри обработчика
+const section = document.querySelector('.team');
+
+window.addEventListener('mousemove', function (event) {
+	const mouseX = event.clientX;
+	const mouseY = event.clientY;
+	const windowWidth = window.innerWidth;
+	const windowHeight = window.innerHeight;
+
+	// Получаем все элементы с классом team__parallax
+	const parallaxElements = document.querySelectorAll('.team__parallax');
+
+	// Проходим по каждому элементу
+	parallaxElements.forEach((element, index) => {
+		// Рассчитываем медленное смещение в зависимости от положения мыши на экране
+		let moveX = (mouseX - windowWidth / 2) * 0.01; // Сделаем движение медленнее
+		let moveY = (mouseY - windowHeight / 2) * 0.01; // Сделаем движение медленнее
+
+		// Меняем направление движения для четных и нечетных элементов
+		if (index % 2 === 0) {
+			moveX = -moveX; // Для четных элементов смещаем в другую сторону
+			moveY = -moveY; // Для четных элементов смещаем в другую сторону
+		}
+
+		// Также применяем эффект скролла, чтобы оба эффекта работали вместе
+		const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		let offset =
+			index % 2 === 0
+				? (scrollTop - section.offsetTop) * 0.03 // Сделаем движение медленнее
+				: (scrollTop - section.offsetTop) * -0.03; // Сделаем движение медленнее
+
+		// Применяем трансформацию, комбинируя скролл и движение мыши
+		element.style.transform = `translate(${moveX}px, ${offset + moveY}px)`;
+	});
 });
 
 // Handle active step items based on scroll position
