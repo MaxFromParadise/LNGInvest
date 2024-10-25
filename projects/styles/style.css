@@ -72,7 +72,7 @@ body {
 	gap: 1.8rem;
 	position: fixed;
 	top: 0;
-	left: -300%;
+	left: -630px;
 	max-width: 600px;
 	width: 100%;
 	min-height: 100vh;
@@ -80,7 +80,7 @@ body {
 	background: #1825aa;
 	z-index: 100;
 	padding: 3.5rem 3rem 3rem 6rem;
-	transition: left 0.5s ease-out, opacity 0.3s ease;
+	transition: left 0.3s ease-out, opacity 0.3s ease;
 	overflow-y: auto;
 }
 .menu__logo {
@@ -151,9 +151,6 @@ body {
 }
 
 header.header {
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
 	position: relative;
 	padding-bottom: 180px;
 	margin-bottom: 5rem;
@@ -169,6 +166,8 @@ header.header {
 	mask-image: url(../img/header/mask.png);
 	background: url('../img/header/projectsBG.jpg'),
 		linear-gradient(90deg, #0075c9 0%, #0018df 100%);
+	background-attachment: fixed;
+
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -362,8 +361,22 @@ header.header {
 .profi {
 	overflow: hidden;
 	padding-top: 60px;
+	position: relative;
 }
 .profi__container {
+	position: relative;
+}
+.profi__bg {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-49%);
+	bottom: 70px;
+	width: 1940px;
+	height: 1000px;
+}
+.profi__bg img {
+	width: 100%;
+	height: 100%;
 }
 .profi__title {
 	color: #1825aa;
@@ -373,7 +386,7 @@ header.header {
 	font-size: clamp(2rem, calc(1.2245rem + 3.8776vw), 4.375rem);
 	font-weight: 400;
 	position: relative;
-	margin-bottom: 40px;
+	margin-bottom: 430px;
 }
 .profi__title_back {
 	color: #cbcbcb;
@@ -390,6 +403,7 @@ header.header {
 	max-width: 1181px;
 	max-height: 855px;
 	margin-bottom: -10px;
+	margin-left: -130px;
 }
 .profi__video video {
 	width: 100%;
@@ -463,7 +477,6 @@ header.header {
 }
 /* partners */
 .partners {
-	cursor: pointer;
 	margin-bottom: 150px;
 }
 .partners__container {
@@ -477,6 +490,7 @@ header.header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
 }
 
 .swiper-slide img {
@@ -913,6 +927,15 @@ header.header {
 	}
 	.profi__grid {
 		min-height: 600px;
+	}
+	.profi__bg {
+		display: none;
+	}
+	.profi__video {
+		margin-left: 0;
+	}
+	.profi__title {
+		margin-bottom: 40px;
 	}
 }
 @media (max-width: 767.98px) {

@@ -78,7 +78,7 @@ const swiper = new Swiper('.swiper', {
 	},
 });
 // menu partners
-const partnersButton = document.querySelector('.partners');
+const partnersButton = document.querySelector('.swiper');
 const menuPartners = document.querySelector('.menu-partners');
 const closeButton = document.querySelector('.menu-partners__close');
 const logo = document.querySelector('.menu-partners__logo'); // Получаем элемент логотипа
