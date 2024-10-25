@@ -637,6 +637,7 @@ header.header {
 	background-color: #d1d5d8;
 	padding-top: 150px;
 	overflow: hidden;
+	position: relative;
 }
 .team__flex {
 	display: flex;
@@ -657,6 +658,7 @@ header.header {
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
+	z-index: 2;
 }
 .team__title {
 	color: #000003;
@@ -674,6 +676,12 @@ header.header {
 	color: #000003;
 	font-weight: 300;
 	margin-bottom: 3.5rem;
+	position: relative;
+	z-index: 5;
+}
+.team__button {
+	z-index: 5;
+	position: relative;
 }
 .team__title_back {
 	position: absolute;
@@ -689,6 +697,7 @@ header.header {
 }
 .team__parallax {
 	position: absolute;
+	z-index: 3;
 }
 .team__parallax_1 {
 	top: 57%;
@@ -719,8 +728,8 @@ header.header {
 	left: 50%;
 }
 .team__parallax_8 {
-	top: 90%;
-	left: 13%;
+	top: 80%;
+	left: 23%;
 }
 .team__parallax_9 {
 	top: 90%;
@@ -730,7 +739,92 @@ header.header {
 	top: 90%;
 	left: 66%;
 }
+.team__parallax-back {
+	position: absolute;
+	left: 0; /* Оставляем элементы слева */
+	z-index: 0;
+}
 
+.team__parallax-back_1 {
+	top: 5%;
+	left: 5%;
+}
+.team__parallax-back_2 {
+	top: 12%;
+	left: 15%;
+}
+.team__parallax-back_3 {
+	top: 25%;
+	left: 22%;
+}
+.team__parallax-back_4 {
+	top: 35%;
+	left: 10%;
+}
+.team__parallax-back_5 {
+	top: 45%;
+	left: 28%;
+}
+.team__parallax-back_6 {
+	top: 55%;
+	left: 7%;
+}
+.team__parallax-back_7 {
+	top: 65%;
+	left: 18%;
+}
+.team__parallax-back_8 {
+	top: 78%;
+	left: 6%;
+} /* было 35% */
+.team__parallax-back_9 {
+	top: 85%;
+	left: 4%;
+}
+.team__parallax-back_10 {
+	top: 95%;
+	left: 26%;
+}
+.team__parallax-back_11 {
+	top: 10%;
+	left: 22%;
+}
+.team__parallax-back_12 {
+	top: 20%;
+	left: 5%;
+}
+.team__parallax-back_13 {
+	top: 30%;
+	left: 27%;
+}
+.team__parallax-back_14 {
+	top: 42%;
+	left: 4%;
+} /* было 32% */
+.team__parallax-back_15 {
+	top: 52%;
+	left: 14%;
+}
+.team__parallax-back_16 {
+	top: 63%;
+	left: 28%;
+}
+.team__parallax-back_17 {
+	top: 70%;
+	left: 4%;
+}
+.team__parallax-back_18 {
+	top: 77%;
+	left: 14%;
+}
+.team__parallax-back_19 {
+	top: 90%;
+	left: 3%;
+}
+.team__parallax-back_20 {
+	top: 85%;
+	left: 13%;
+} /* было 39% */
 /* warranty */
 .warranty {
 	background: url('../img/warranty/warrantyBG.jpg') no-repeat center center;
@@ -1177,6 +1271,86 @@ header.header {
 	.team__parallax_10 {
 		top: 90%;
 		left: 66%;
+	}
+	.team__parallax-back_1 {
+		top: 5%;
+		left: 5%;
+	}
+	.team__parallax-back_2 {
+		top: 10%;
+		left: 20%;
+	}
+	.team__parallax-back_3 {
+		top: 15%;
+		left: 35%;
+	}
+	.team__parallax-back_4 {
+		top: 25%;
+		left: 10%;
+	}
+	.team__parallax-back_5 {
+		top: 30%;
+		left: 25%;
+	}
+	.team__parallax-back_6 {
+		top: 40%;
+		left: 15%;
+	}
+	.team__parallax-back_7 {
+		top: 50%;
+		left: 30%;
+	}
+	.team__parallax-back_8 {
+		top: 60%;
+		left: 5%;
+	}
+	.team__parallax-back_9 {
+		top: 70%;
+		left: 40%;
+	}
+	.team__parallax-back_10 {
+		top: 75%;
+		left: 15%;
+	}
+	.team__parallax-back_11 {
+		top: 80%;
+		left: 25%;
+	}
+	.team__parallax-back_12 {
+		top: 15%;
+		left: 45%;
+	}
+	.team__parallax-back_13 {
+		top: 35%;
+		left: 50%;
+	}
+	.team__parallax-back_14 {
+		top: 45%;
+		left: 35%;
+	}
+	.team__parallax-back_15 {
+		top: 55%;
+		left: 60%;
+	}
+	.team__parallax-back_16 {
+		top: 65%;
+		left: 70%;
+	}
+	.team__parallax-back_17 {
+		top: 80%;
+		left: 80%;
+	}
+	.team__parallax-back_18 {
+		top: 85%;
+		left: 90%;
+	}
+	.team__parallax-back_19 {
+		top: 90%;
+		left: 15%;
+	}
+	.team__parallax-back_20 {
+		top: 95%;
+		left: 30%;
 	}
 }
 @media (max-width: 680px) {

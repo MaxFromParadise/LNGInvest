@@ -177,6 +177,30 @@ document.addEventListener('scroll', function () {
 		// Применяем только трансформацию на основе скролла
 		element.style.transform = `translateY(${offset}px)`;
 	});
+
+	// back
+	const parallaxElementsBack = document.querySelectorAll(
+		'.team__parallax-back'
+	);
+	const teamSection = document.querySelector('section.team');
+	const teamSectionTop = teamSection.getBoundingClientRect().top;
+
+	// Проверяем, находится ли секция .team в видимой области
+	if (teamSectionTop < windowHeight) {
+		const scrollPosition = window.scrollY; // Текущая позиция прокрутки
+
+		parallaxElementsBack.forEach((element, index) => {
+			const speed = (index + 1) * 0.04; // Варьируем скорость для хаотичного эффекта
+
+			// Если индекс четный, движем вниз, если нечетный — вверх
+			const direction = index % 2 === 0 ? 1 : -1;
+
+			// Применяем сдвиг по оси Y, отсчитывая от начала секции
+			element.style.transform = `translateY(${
+				(scrollPosition - teamSection.offsetTop) * speed * direction
+			}px)`;
+		});
+	}
 });
 // team
 // Определяем переменную section для использования внутри обработчика
