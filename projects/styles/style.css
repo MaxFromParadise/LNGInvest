@@ -564,6 +564,7 @@ header.header {
 	column-gap: 30px;
 	row-gap: 10px;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .menu-partners__images img {
@@ -955,5 +956,15 @@ header.header {
 	}
 	.about__bg {
 		bottom: 10%;
+	}
+	.menu-partners__images {
+		justify-content: center;
+	}
+	.menu-partners__close {
+		right: 40px;
+		top: 40px;
+	}
+	.menu-partners {
+		padding: 90px 43px 10px 43px;
 	}
 }
