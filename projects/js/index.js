@@ -58,16 +58,63 @@ faqItems.forEach((item) => {
 	});
 });
 // vertical video
-document.getElementById('playIcon').addEventListener('click', function () {
-	var video = document.getElementById('myVideo');
-	var icon = document.getElementById('playIcon');
+const videoContainer = document.querySelector('.profi__vertical-video');
+const video = document.querySelector('.profi__vertical-video video');
+const icon = document.querySelector('.profi__vertical-video-icon');
 
+videoContainer.addEventListener('click', () => {
+	icon.style.display = 'none';
 	video.play();
-	icon.classList.add('hidden');
+});
+// partners
+const swiper = new Swiper('.swiper', {
+	slidesPerView: 'auto',
+	slidesPerGroup: 4,
+	// freeMode: true,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+		// dynamicBullets: true,
+	},
+});
+// menu partners
+const partnersButton = document.querySelector('.partners');
+const menuPartners = document.querySelector('.menu-partners');
+const closeButton = document.querySelector('.menu-partners__close');
+const logo = document.querySelector('.menu-partners__logo'); // Получаем элемент логотипа
+
+const getScrollBarWidth = () => {
+	const div = document.createElement('div');
+	div.style.overflow = 'scroll';
+	div.style.width = '50px';
+	div.style.height = '50px';
+	document.body.appendChild(div);
+	const scrollBarWidth = div.offsetWidth - div.clientWidth;
+	document.body.removeChild(div);
+	return scrollBarWidth;
+};
+
+partnersButton.addEventListener('click', () => {
+	const scrollBarWidth = getScrollBarWidth();
+	document.body.style.paddingRight = `${scrollBarWidth}px`;
+	document.body.classList.add('lock');
+	overlay.style.display = 'block';
+	menuPartners.style.right = '0';
+	logo.style.display = 'block'; // Показываем логотип при открытии меню
 });
 
-document.getElementById('myVideo').addEventListener('ended', function () {
-	var icon = document.getElementById('playIcon');
+closeButton.addEventListener('click', () => {
+	document.body.style.paddingRight = '0';
+	document.body.classList.remove('lock');
+	overlay.style.display = 'none';
+	menuPartners.style.right = '-920px';
+	logo.style.display = 'none'; // Скрываем логотип при закрытии меню
+});
 
-	icon.classList.remove('hidden');
+overlay.addEventListener('click', () => {
+	document.body.style.paddingRight = '0';
+	document.body.classList.remove('lock');
+	overlay.style.display = 'none';
+	menuPartners.style.right = '-920px';
+	logo.style.display = 'none'; // Скрываем логотип при закрытии меню
 });

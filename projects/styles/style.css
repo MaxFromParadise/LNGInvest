@@ -97,7 +97,9 @@ body {
 	color: #fff;
 	font-size: 1.5rem;
 	font-weight: 500;
+	display: block;
 	transition: opacity 0.3s ease 0s;
+	padding: 10px 20px 10px 10px;
 }
 .menu__link:hover {
 	opacity: 0.7;
@@ -409,7 +411,7 @@ header.header {
 	grid-template-columns: repeat(2, 1fr);
 	padding-top: 68px;
 	gap: 55px;
-	min-height: 765px;
+	min-height: 700px;
 }
 .profi__vertical-video-container {
 	position: relative;
@@ -429,7 +431,9 @@ header.header {
 	cursor: pointer;
 	overflow: hidden;
 }
-
+.profi__vertical-video:hover .profi__vertical-video-icon svg {
+	scale: 1.2;
+}
 .profi__vertical-video {
 	width: 100%;
 	height: 100%;
@@ -449,11 +453,162 @@ header.header {
 	top: 50%;
 	transform: translate(-50%, -50%);
 }
+.profi__vertical-video-icon svg {
+	transition: scale 0.3s ease 0s;
+}
 .profi__descr {
 	color: #666;
 	font-size: 24px;
 	font-weight: 400;
 }
+/* partners */
+.partners {
+	cursor: pointer;
+	margin-bottom: 150px;
+}
+.partners__container {
+	width: 100%;
+	position: relative;
+}
+
+.swiper-slide {
+	width: 170px;
+	height: 110px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper-slide img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.swiper-pagination {
+	--swiper-pagination-bullet-horizontal-gap: 20px;
+}
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+	bottom: -40px;
+}
+.swiper-pagination-bullet::after {
+	content: '';
+	position: absolute;
+	top: -15px;
+	left: -15px;
+	right: -15px;
+	bottom: -15px;
+}
+.swiper-pagination-bullet {
+	transition: width 0.3s ease 0s;
+	position: relative;
+	z-index: 1;
+}
+.swiper-pagination-bullet::after {
+	content: '';
+	position: absolute;
+	top: -15px;
+	left: -15px;
+	right: -15px;
+	bottom: -15px;
+}
+.swiper-pagination-bullet-active {
+	width: 33px;
+	background: #001287;
+	border-radius: 5px;
+}
+/* partners menu */
+.menu-partners {
+	position: fixed;
+	top: 0;
+	right: -920px; /* Начальное положение за пределами экрана */
+	width: 100%;
+	max-width: 900px;
+	height: 100%;
+	background: white;
+	box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+	z-index: 130;
+	transition: right 0.3s ease;
+	padding: 180px 43px 10px 43px;
+	box-sizing: border-box;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+}
+
+.menu-partners__title {
+	color: #1825aa;
+	-webkit-text-stroke-width: 1;
+	-webkit-text-stroke-color: #1825aa;
+	font-family: 'Letov';
+	font-size: 40px;
+	font-weight: 400;
+	margin: 0 0 20px;
+	position: relative;
+}
+.menu-partners__title_back {
+	position: absolute;
+	bottom: -15px;
+	left: 0;
+	opacity: 0.2;
+	color: #cbcbcb;
+	font-size: 120px;
+	font-weight: 900;
+}
+.menu-partners__images {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 30px;
+	row-gap: 10px;
+	justify-content: space-between;
+}
+
+.menu-partners__images img {
+	max-width: 160px;
+	margin: 5px;
+}
+
+.menu-partners__logo {
+	display: none;
+	position: fixed;
+	top: 60px;
+	left: 100px;
+	z-index: -1;
+}
+
+.menu-partners__close {
+	position: absolute;
+	right: 100px;
+	top: 85px;
+	width: 40px;
+	height: 40px;
+	border: 1px solid black;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.menu-partners__close::before,
+.menu-partners__close::after {
+	content: '';
+	position: absolute;
+	left: 18px;
+	top: 8px;
+	width: 2px;
+	height: 20px;
+	background: black;
+}
+
+.menu-partners__close::before {
+	transform: rotate(45deg);
+}
+
+.menu-partners__close::after {
+	transform: rotate(-45deg);
+}
+
 /* faq */
 .faq {
 	margin-bottom: 4rem;
