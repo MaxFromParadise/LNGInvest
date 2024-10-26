@@ -60,7 +60,6 @@ body {
 	left: -630px;
 	max-width: 600px;
 	width: 100%;
-	min-height: 1000px;
 	height: 100%;
 	background: #1825aa;
 	z-index: 100;
@@ -130,7 +129,7 @@ body {
 }
 
 .lock {
-	/* overflow: hidden; */
+	overflow: hidden;
 }
 
 header.header {
@@ -297,7 +296,7 @@ header.header {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	column-gap: 30px;
+	column-gap: 20px;
 	row-gap: 90px;
 }
 
