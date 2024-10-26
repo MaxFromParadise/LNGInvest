@@ -4,20 +4,38 @@ const burger = document.querySelector('.burger');
 const menu = document.querySelector('.menu');
 const overlay = document.querySelector('.overlay');
 const body = document.body;
+// Function to get scrollbar width
+function getScrollbarWidth() {
+	return window.innerWidth - document.documentElement.clientWidth;
+}
 
-burger.addEventListener('click', () => {
+// Burger menu toggle functions
+function toggleMenu() {
+	const isOpen = menu.classList.toggle('open');
 	burger.classList.toggle('open');
-	menu.classList.toggle('open');
-	overlay.style.display = menu.classList.contains('open') ? 'flex' : 'none';
-	body.classList.toggle('lock', menu.classList.contains('open'));
-});
+	overlay.style.display = isOpen ? 'flex' : 'none';
 
-overlay.addEventListener('click', () => {
+	if (isOpen) {
+		const scrollbarWidth = getScrollbarWidth();
+		body.style.paddingRight = `${scrollbarWidth}px`;
+	} else {
+		body.style.paddingRight = '';
+	}
+
+	body.classList.toggle('lock', isOpen);
+}
+
+function closeMenu() {
 	burger.classList.remove('open');
 	menu.classList.remove('open');
 	overlay.style.display = 'none';
+	body.style.paddingRight = '';
 	body.classList.remove('lock');
-});
+}
+
+// Event listeners for burger menu
+burger.addEventListener('click', toggleMenu);
+overlay.addEventListener('click', closeMenu);
 // points
 const points = document.querySelectorAll('.point');
 const infoBlock = document.getElementById('info-block');
