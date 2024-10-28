@@ -17,21 +17,17 @@ function toggleMenu() {
 	burger.classList.toggle('open');
 	overlay.style.display = isOpen ? 'flex' : 'none';
 
-	if (isOpen) {
-		const scrollbarWidth = getScrollbarWidth();
-		body.style.paddingRight = `${scrollbarWidth}px`;
+	if (window.innerWidth < 768) {
+		body.classList.toggle('lock', isOpen);
 	} else {
-		body.style.paddingRight = '';
+		body.classList.remove('lock');
 	}
-
-	body.classList.toggle('lock', isOpen);
 }
 
 function closeMenu() {
 	burger.classList.remove('open');
 	menu.classList.remove('open');
 	overlay.style.display = 'none';
-	body.style.paddingRight = '';
 	body.classList.remove('lock');
 }
 

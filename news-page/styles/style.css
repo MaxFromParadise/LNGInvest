@@ -263,6 +263,26 @@ body {
 	font-weight: 100;
 	margin-bottom: 1.45rem;
 }
+.socials-menu__link {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	border: 1px solid #666666;
+	transition: border-color 0.3s ease 0s, background 0.3s ease 0s;
+}
+.socials-menu__link:hover {
+	background: #0075c9;
+	border-color: #0075c9;
+}
+.socials-menu__link svg path {
+	transition: fill 0.3s ease 0s;
+}
+.socials-menu__link:hover svg path {
+	fill: #fff;
+}
 .socials-menu__group {
 	display: flex;
 	gap: 1.3rem;
@@ -731,6 +751,7 @@ header.header {
 .table__footer {
 	background: #d4d4d4;
 }
+
 /* second table */
 .table-info-wrapper {
 	overflow-x: auto;
