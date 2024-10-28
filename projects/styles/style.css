@@ -412,10 +412,7 @@ header.header {
 	transition: opacity 0.3s;
 	cursor: pointer;
 }
-.swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide-active {
-	opacity: 1;
-}
-.swiper-thumbs .swiper-slide-thumb-active {
+.swiper-thumbs .swiper-slide.swiper-slide-active {
 	opacity: 1;
 }
 .swiper-slide {
