@@ -233,18 +233,32 @@ body {
 }
 .menu__search {
 	background: #1a2696;
-	border: none;
 	border-radius: 2rem;
 }
 .menu__search-input {
-	border: none;
-	background: transparent;
 	width: 100%;
-	font-size: 1.5rem;
 	height: 100%;
 	padding: 1.3rem 2rem 1.3rem 3.45rem;
 	color: #fff;
+	font-size: 1.5rem;
+	border: none;
 	outline: none;
+	background: transparent;
+}
+.menu__search-input::placeholder {
+	font-style: italic;
+	color: #b1b1b1;
+}
+.menu__search-icon {
+	position: absolute;
+	top: 50%;
+	left: 1.4rem;
+	transform: translateY(-50%);
+	background: transparent;
+	border: none;
+	outline: none;
+	z-index: 2;
+	cursor: pointer;
 }
 .menu__search-input::placeholder {
 	color: #b1b1b1;

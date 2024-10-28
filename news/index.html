@@ -74,8 +74,8 @@
 						<a href="#" class="menu__link">Контакты</a>
 					</li>
 				</ul>
-				<a href="#" class="menu__search">
-					<div class="menu__search-icon">
+				<form class="menu__search">
+					<button type="submit" class="menu__search-icon">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="17"
@@ -96,9 +96,15 @@
 								fill="white"
 							/>
 						</svg>
-					</div>
-					Поиск
-				</a>
+					</button>
+					<input
+						autocomplete="off"
+						type="text"
+						name="search"
+						placeholder="Поиск"
+						class="menu__search-input"
+					/>
+				</form>
 				<div class="menu__socials socials-menu">
 					<div class="socials-menu__title">Мы в соцсетях</div>
 					<div class="socials-menu__group">
