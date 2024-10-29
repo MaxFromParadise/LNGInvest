@@ -69,7 +69,7 @@ let lastSlideChangeTime = 0;
 // Функция для проверки, находится ли верх секции в пределах 200 пикселей от верха экрана
 function checkSectionInView() {
 	const rect = section.getBoundingClientRect();
-	isSectionInView = rect.top <= 50 && rect.top >= -250; // Проверяем, что верхняя часть секции находится в диапазоне от 0 до 200 пикселей от верхней границы экрана
+	isSectionInView = rect.top <= 50 && rect.top >= -500; // Проверяем, что верхняя часть секции находится в диапазоне от 0 до 200 пикселей от верхней границы экрана
 }
 
 // Обработчик события скролла колесиком мыши
@@ -85,13 +85,12 @@ function onWheel(event) {
 				lastSlideChangeTime = currentTime;
 				event.preventDefault(); // Блокируем прокрутку страницы
 			} else if (event.deltaY < 0 && !backgroundSwiper.isBeginning) {
-				// Прокрутка вверх, если слайд не первый
 				backgroundSwiper.slidePrev();
 				lastSlideChangeTime = currentTime;
-				event.preventDefault(); // Блокируем прокрутку страницы
+				event.preventDefault();
 			}
 		} else {
-			event.preventDefault(); // Блокируем скролл, если прошло меньше секунды
+			event.preventDefault();
 		}
 	}
 }
