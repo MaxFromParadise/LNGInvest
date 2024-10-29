@@ -11,12 +11,17 @@
 }
 body {
 	font-family: 'Roboto', sans-serif;
+	background: #cfcfcf;
+}
+.main-wrapper {
 	position: relative;
 	max-width: 1920px;
 	margin: 0 auto;
 	box-shadow: 0px 0px 42px 0px rgba(0, 0, 0, 0.27);
 	-webkit-box-shadow: 0px 0px 42px 0px rgba(0, 0, 0, 0.27);
 	-moz-box-shadow: 0px 0px 42px 0px rgba(0, 0, 0, 0.27);
+	background: #fff;
+	z-index: 80;
 }
 [class*='__container'] {
 	max-width: 1030px;
@@ -593,9 +598,11 @@ header.header {
 	font-weight: 400;
 }
 .footer__license-text {
-	max-width: 1320px;
-	display: block;
+	max-width: 1030px;
 	margin: 0 auto;
+	padding: 0 15px;
+	width: 100%;
+	display: block;
 }
 /* hover */
 .button:hover {

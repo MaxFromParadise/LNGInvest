@@ -112,7 +112,17 @@ lightbox.addEventListener('click', (e) => {
 // closeButton.addEventListener('click', () => {
 //     lightbox.style.display = 'none';
 //     if (swiper) {
-//         swiper.destroy(true, true); // Уничтожаем экземпляр Swiper
-//         swiper = null; // Обнуляем переменную swiper
+//         swiper.destroy(true, true);
+//         swiper = null;
 //     }
 // });
+document.addEventListener('keydown', (event) => {
+	if (event.key === 'Escape') {
+		// Проверка, что нажата клавиша Esc
+		lightbox.style.display = 'none';
+		if (swiper) {
+			swiper.destroy(true, true);
+			swiper = null;
+		}
+	}
+});
