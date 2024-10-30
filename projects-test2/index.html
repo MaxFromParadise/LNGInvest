@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="icon.png" type="image/png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/swiper/swiper-bundle.min.css"
+		/>
+		<link rel="stylesheet" href="styles/style.css" />
+		<title>Ответы на вопросы</title>
+	</head>
+	<body>
+		<div class="main-wrapper">
+			<header class="header">
+				<div class="header__container">
+					<nav class="header__nav nav-header">
+						<a href="#" class="nav-header__logo">
+							<img src="img/logo.svg" alt="LNG Invest Project" />
+						</a>
+						<div class="nav-header__right">
+							<button class="nav-header__lang">EN</button>
+							<button class="nav-header__burger burger"></button>
+						</div>
+					</nav>
+					<div class="header__content">
+						<div class="header__current-page">
+							Главная
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="25"
+								height="6"
+								viewBox="0 0 25 6"
+								fill="none"
+							>
+								<path
+									d="M4.90014 1.70003C6.50014 4.20003 3.80013 6.90004 1.30013 5.30004C1.10013 5.20004 0.900132 5.00004 0.800132 4.80004C-0.799868 2.30004 1.90014 -0.399965 4.40014 1.20003C4.60014 1.30003 4.80014 1.50003 4.90014 1.70003Z"
+									fill="white"
+								/>
+								<path
+									d="M23.6003 1.70003C25.2003 4.20003 22.5003 6.90004 20.0003 5.30004C19.8003 5.20004 19.6003 5.00004 19.5003 4.80004C17.9003 2.30004 20.6003 -0.399965 23.1003 1.20003C23.3003 1.30003 23.5003 1.50003 23.6003 1.70003Z"
+									fill="white"
+								/>
+								<path
+									d="M21.5003 3.0002V0.700195C17.8003 0.700195 17.5003 2.2002 12.1003 2.2002C6.70031 2.2002 6.50029 0.700195 2.80029 0.700195V5.8002C6.10029 5.8002 6.70031 4.1002 12.1003 4.1002C17.5003 4.1002 17.5003 5.8002 21.5003 5.8002V3.0002Z"
+									fill="white"
+								/>
+							</svg>
+							<span>Проекты</span>
+						</div>
+						<h1 class="header__title">Портфолио<br />проектов<br />компании</h1>
+						<p class="header__descr">LNG Invest Project – комплексный подход</p>
+						<button class="button header__button">Заказать</button>
+					</div>
+				</div>
+				<div class="menu">
+					<a href="#" class="menu__logo">
+						<img src="img/logo.svg" alt="LNG Invest Project" />
+					</a>
+					<ul class="menu__list">
+						<li class="menu__item">
+							<a href="#" class="menu__link">О компании</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">Новости</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">Проекты</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">Вопрос - Ответ</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">Контакты</a>
+						</li>
+					</ul>
+					<form class="menu__search">
+						<button type="submit" class="menu__search-icon">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="17"
+								height="18"
+								viewBox="0 0 17 18"
+								fill="none"
+							>
+								<path
+									d="M6.49995 2.39996C8.99995 2.39996 11.1 4.49994 11.1 6.99994C11.1 9.49994 8.99995 11.5999 6.49995 11.5999C3.99995 11.5999 1.89996 9.49994 1.89996 6.99994C1.89996 4.49994 3.99995 2.39996 6.49995 2.39996ZM6.49995 0.699951C2.99995 0.699951 0.199951 3.49994 0.199951 6.99994C0.199951 10.4999 2.99995 13.2999 6.49995 13.2999C9.99995 13.2999 12.8 10.4999 12.8 6.99994C12.8 3.49994 9.99995 0.699951 6.49995 0.699951Z"
+									fill="white"
+								/>
+								<path
+									d="M16.0999 14.7999L12.3999 11.0999C11.8999 11.8999 11.1999 12.4999 10.3999 12.9999L14.1999 16.7999C14.6999 17.2999 15.5999 17.2999 16.1999 16.7999C16.5999 16.1999 16.5999 15.2999 16.0999 14.7999Z"
+									fill="white"
+								/>
+								<path
+									d="M5.7999 4.99988C5.8999 4.99988 5.8999 4.99988 5.7999 4.99988L5.8999 3.8999C5.8999 3.8999 5.8999 3.8999 5.7999 3.8999C4.4999 3.8999 3.3999 4.99987 3.3999 6.29987H4.4999C4.4999 5.59987 5.0999 4.99988 5.7999 4.99988Z"
+									fill="white"
+								/>
+							</svg>
+						</button>
+						<input
+							autocomplete="off"
+							type="text"
+							name="search"
+							placeholder="Поиск"
+							class="menu__search-input"
+						/>
+					</form>
+					<div class="menu__socials socials-menu">
+						<div class="socials-menu__title">Мы в соцсетях</div>
+						<div class="socials-menu__group">
+							<a href="#vk" class="socials-menu__link"
+								><svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="42"
+									height="42"
+									viewBox="0 0 42 42"
+									fill="none"
+								>
+									<path
+										d="M21.2 40.7998C32.2456 40.7998 41.2 31.8455 41.2 20.7998C41.2 9.75411 32.2456 0.799805 21.2 0.799805C10.1543 0.799805 1.19995 9.75411 1.19995 20.7998C1.19995 31.8455 10.1543 40.7998 21.2 40.7998Z"
+										stroke="white"
+										stroke-miterlimit="10"
+									/>
+									<path
+										d="M30.5 16.8998C30.6 16.4998 30.5 16.0997 29.8 16.0997H27.5C26.9 16.0997 26.7 16.3998 26.5 16.6998C26.5 16.6998 25.4 19.1998 23.7 20.8998C23.2 21.3998 22.9 21.4998 22.7 21.4998C22.6 21.4998 22.3 21.2998 22.3 20.8998V16.7997C22.3 16.2997 22.1 15.9998 21.7 15.9998H18.2C17.8 15.9998 17.6 16.1998 17.6 16.4998C17.6 16.9998 18.4 17.0998 18.5 18.4998V21.4998C18.5 22.1998 18.4 22.2997 18.1 22.2997C17.3 22.2997 15.5 19.6997 14.4 16.7997C14.2 16.1997 14 15.9998 13.4 15.9998H11.1C10.5 15.9998 10.3 16.2997 10.3 16.5997C10.3 17.0997 11.1 19.7998 13.9 23.3998C15.8 25.7998 18.4 27.1998 20.8 27.1998C22.2 27.1998 22.4 26.8998 22.4 26.3998V24.5997C22.4 23.9997 22.5 23.8998 23 23.8998C23.3 23.8998 23.9 24.0998 25.2 25.1998C26.7 26.5998 27 27.1998 27.8 27.1998H30.1001C30.7001 27.1998 31.1 26.8997 30.9 26.2997C30.7 25.6997 30 24.8998 29 23.8998C28.5 23.2998 27.7 22.6998 27.4 22.3998C27.1 21.9998 27.2 21.7998 27.4 21.4998C27.5 21.6998 30.2 18.0998 30.5 16.8998Z"
+										fill="white"
+									/></svg
+							></a>
+							<a href="#telegram" class="socials-menu__link"
+								><svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="42"
+									height="42"
+									viewBox="0 0 42 42"
+									fill="none"
+								>
+									<path
+										d="M21.1001 40.7998C32.1458 40.7998 41.1001 31.8455 41.1001 20.7998C41.1001 9.75411 32.1458 0.799805 21.1001 0.799805C10.0544 0.799805 1.1001 9.75411 1.1001 20.7998C1.1001 31.8455 10.0544 40.7998 21.1001 40.7998Z"
+										fill="white"
+										stroke="white"
+										stroke-miterlimit="10"
+									/>
+									<path
+										d="M11.6002 20.7997C11.6002 20.7997 19.2002 17.4997 21.8002 16.2997C22.8002 15.7997 26.2002 14.3998 26.2002 14.3998C26.2002 14.3998 27.8002 13.7997 27.6002 15.2997C27.6002 15.8997 27.2002 18.1998 26.9002 20.6998C26.4002 24.1998 25.8002 27.9998 25.8002 27.9998C25.8002 27.9998 25.7002 29.0997 25.0002 29.2997C24.3002 29.4997 23.0002 28.6998 22.8002 28.4998C22.6002 28.3998 19.5002 26.2997 18.4002 25.2997C18.1002 24.9997 17.7002 24.4997 18.4002 23.7997C20.0002 22.2997 21.9002 20.3998 23.0002 19.1998C23.5002 18.5998 24.1002 17.2998 21.9002 18.8998C18.8002 21.1998 15.7002 23.2997 15.7002 23.2997C15.7002 23.2997 15.0002 23.7997 13.7002 23.2997C12.4002 22.8997 10.8002 22.2997 10.8002 22.2997C10.8002 22.2997 9.8002 21.5997 11.6002 20.7997Z"
+										fill="#1825AA"
+									/></svg
+							></a>
+							<a href="#ok" class="socials-menu__link"
+								><svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="42"
+									height="42"
+									viewBox="0 0 42 42"
+									fill="none"
+								>
+									<path
+										d="M21.1001 40.7998C32.1458 40.7998 41.1001 31.8455 41.1001 20.7998C41.1001 9.75411 32.1458 0.799805 21.1001 0.799805C10.0544 0.799805 1.1001 9.75411 1.1001 20.7998C1.1001 31.8455 10.0544 40.7998 21.1001 40.7998Z"
+										stroke="white"
+										stroke-miterlimit="10"
+									/>
+									<path
+										d="M26.9 22.9C26.6 23.2 26.3 23.4 25.9 23.7C25 24.3 24 24.6 23 24.8C22.7 24.9 22.3 24.9 22 25C22 25 22.0001 25.1 22.1001 25.1C23.3001 26.3 24.6 27.6 25.8 28.8C26 29 26.1 29.2 26.2 29.4C26.3 29.9 26.2 30.3 25.9 30.6C25.7 30.8 25.4001 31 25.1001 31C25.1001 31 25.1 31 25 31C24.9 31 24.8 31 24.8 31H24.7C24.5 31 24.3001 30.9 24.1001 30.7C24.0001 30.6 23.9 30.5 23.8 30.4C22.9 29.5 21.9 28.5 21 27.6C20.9 27.5 20.9 27.5 20.9 27.6C20 28.5 19.0001 29.5 18.1001 30.4C17.8001 30.7 17.6 30.9 17.2 30.9C17.1 30.9 17 30.9 17 30.9C16.9 30.9 16.9 30.9 16.8 30.8C16.3 30.7 15.7 30.1 15.8 29.5C15.8 29.2 15.9001 28.9 16.1001 28.7C17.4001 27.4 18.6 26.2 19.9 24.9C19.9 24.9 19.9 24.8 20 24.8C19.9 24.8 19.8 24.8 19.7 24.8C18.8 24.7 18 24.5 17.2 24.2C16.7 24 16.2 23.7 15.8 23.4C15.5 23.2 15.3001 23 15.1001 22.8C14.9001 22.6 14.8 22.3 14.8 22.1C14.8 21.5 15.2 20.9 15.8 20.8C16.1 20.7 16.5 20.8 16.8 21C17 21.1 17.3 21.3 17.5 21.5C18 21.8 18.5 22 19 22.1C19.6 22.3 20.3 22.4 21 22.4C21.3 22.4 21.6 22.4 21.9 22.3C22.5 22.2 23.2 22.1 23.8 21.8C24.2 21.6 24.6 21.4 25 21.1C25.3 20.9 25.6 20.8 25.9 20.8C26.4 20.8 26.7 21 27 21.4C27.1 21.6 27.2 21.8 27.2 22.1C27.3 22.4 27.1 22.7 26.9 22.9Z"
+										fill="white"
+									/>
+									<path
+										d="M21.1002 10.3999C18.2002 10.3999 15.9001 12.6999 15.9001 15.4999C15.9001 18.4999 18.2002 20.7999 21.1002 20.7999C24.0002 20.7999 26.3002 18.4999 26.3002 15.6999C26.3002 12.7999 24.0002 10.3999 21.1002 10.3999ZM21.0002 18.1999C19.6002 18.1999 18.5002 16.9999 18.5002 15.5999C18.5002 14.1999 19.7002 12.9999 21.1002 13.0999C22.5002 13.0999 23.7001 14.2999 23.7001 15.6999C23.6001 17.0999 22.5002 18.2999 21.0002 18.1999Z"
+										fill="white"
+									/></svg
+							></a>
+						</div>
+					</div>
+				</div>
+				<div class="header__bg"></div>
+				<div class="overlay"></div>
+			</header>
+			<main class="main">
+				<div class="sticky">
+					<div class="sticky__categories categories-sticky">
+						<div class="categories-sticky__button">
+							<img src="img/slider/categories-icon.svg" alt="categories icon" />
+							<span>Категории поиска</span>
+						</div>
+						<div class="categories-sticky__items">
+							<div class="categories-sticky__item">Все</div>
+							<div class="categories-sticky__item">Инжиниринг</div>
+							<div class="categories-sticky__item active">Строительство</div>
+							<div class="categories-sticky__item">Проектирование</div>
+							<div class="categories-sticky__item">Управление проектом</div>
+							<div class="categories-sticky__item">Ввод в эксплуатацию</div>
+							<div class="categories-sticky__item">ПНР</div>
+							<div class="categories-sticky__item">Подсадка модулей</div>
+							<div class="categories-sticky__item">Обоснование инвестиций</div>
+							<div class="categories-sticky__item">Обслуживание</div>
+							<div class="categories-sticky__item">АСУ ТП</div>
+							<div class="categories-sticky__item">Комплектация</div>
+							<div class="categories-sticky__item">Экспертиза</div>
+							<div class="categories-sticky__item">Разработка документации</div>
+							<div class="categories-sticky__item">Поставка оборудования</div>
+						</div>
+					</div>
+					<div class="sticky__icons">
+						<div class="project__icon">
+							<img
+								src="img/slider/slide-filter-icon-1.svg"
+								alt="slide-filter-icon-1"
+							/>
+						</div>
+						<div class="project__icon">
+							<img
+								src="img/slider/slide-filter-icon-2.svg"
+								alt="slide-filter-icon-2"
+							/>
+						</div>
+						<div class="project__icon">
+							<img
+								src="img/slider/slide-filter-icon-3.svg"
+								alt="slide-filter-icon-3"
+							/>
+						</div>
+						<div class="project__icon">
+							<img
+								src="img/slider/slide-filter-icon-4.svg"
+								alt="slide-filter-icon-4"
+							/>
+						</div>
+					</div>
+					<h2 class="sticky__title">
+						Строительство комплекса производства СПГ в ТОР Надеждинская
+					</h2>
+					<div class="sticky__info">
+						<div class="sticky__button-next">&#8250;</div>
+						<div class="sticky__counter">001 / 004</div>
+					</div>
+				</div>
+				<section class="project">
+					<div class="project__bg">
+						<img src="img/slider/slide1.jpg" alt="bg" />
+					</div>
+					<div class="project__container">
+						<div class="project__content">
+							<div class="sticky__categories categories-sticky">
+								<div class="categories-sticky__button">
+									<img
+										src="img/slider/categories-icon.svg"
+										alt="categories icon"
+									/>
+									<span>Категории поиска</span>
+								</div>
+								<div class="categories-sticky__items">
+									<div class="categories-sticky__item">Все</div>
+									<div class="categories-sticky__item">Инжиниринг</div>
+									<div class="categories-sticky__item active">
+										Строительство
+									</div>
+									<div class="categories-sticky__item">Проектирование</div>
+									<div class="categories-sticky__item">Управление проектом</div>
+									<div class="categories-sticky__item">Ввод в эксплуатацию</div>
+									<div class="categories-sticky__item">ПНР</div>
+									<div class="categories-sticky__item">Подсадка модулей</div>
+									<div class="categories-sticky__item">
+										Обоснование инвестиций
+									</div>
+									<div class="categories-sticky__item">Обслуживание</div>
+									<div class="categories-sticky__item">АСУ ТП</div>
+									<div class="categories-sticky__item">Комплектация</div>
+									<div class="categories-sticky__item">Экспертиза</div>
+									<div class="categories-sticky__item">
+										Разработка документации
+									</div>
+									<div class="categories-sticky__item">
+										Поставка оборудования
+									</div>
+								</div>
+							</div>
+							<div class="projects__icons">
+								<div class="project__icon">
+									<img
+										src="img/slider/slide-filter-icon-1.svg"
+										alt="slide-filter-icon-1"
+									/>
+								</div>
+								<div class="project__icon">
+									<img
+										src="img/slider/slide-filter-icon-2.svg"
+										alt="slide-filter-icon-2"
+									/>
+								</div>
+								<div class="project__icon">
+									<img
+										src="img/slider/slide-filter-icon-3.svg"
+										alt="slide-filter-icon-3"
+									/>
+								</div>
+								<div class="project__icon">
+									<img
+										src="img/slider/slide-filter-icon-4.svg"
+										alt="slide-filter-icon-4"
+									/>
+								</div>
+							</div>
+							<h2 class="project__title">
+								Строительство комплекса производства СПГ в ТОР Надеждинская
+							</h2>
+							<div class="project__info">
+								<div class="project__button-next">&#8250;</div>
+								<div class="project__counter">001 / 004</div>
+							</div>
+						</div>
+						<div class="project__image">
+							<img src="img/slider/slide1.jpg" alt="image1" />
+						</div>
+					</div>
+				</section>
+				<section class="project">
+					<div class="project__bg">
+						<img src="img/slider/slide2.jpg" alt="bg2" />
+					</div>
+					<div class="project__container">
+						<div class="project__content">
+							<div class="sticky__categories categories-sticky">
+								<div class="categories-sticky__button">
+									<img
+										src="img/slider/categories-icon.svg"
+										alt="categories icon"
+									/>
+									<span>Категории поиска</span>
+								</div>
+								<div class="categories-sticky__items">
+									<div class="categories-sticky__item">Все</div>
+									<div class="categories-sticky__item">Инжиниринг</div>
+									<div class="categories-sticky__item active">
+										Строительство
+									</div>
+									<div class="categories-sticky__item">Проектирование</div>
+									<div class="categories-sticky__item">Управление проектом</div>
+									<div class="categories-sticky__item">Ввод в эксплуатацию</div>
+									<div class="categories-sticky__item">ПНР</div>
+									<div class="categories-sticky__item">Подсадка модулей</div>
+									<div class="categories-sticky__item">
+										Обоснование инвестиций
+									</div>
+									<div class="categories-sticky__item">Обслуживание</div>
+									<div class="categories-sticky__item">АСУ ТП</div>
+									<div class="categories-sticky__item">Комплектация</div>
+									<div class="categories-sticky__item">Экспертиза</div>
+									<div class="categories-sticky__item">
+										Разработка документации
+									</div>
+									<div class="categories-sticky__item">
+										Поставка оборудования
+									</div>
+								</div>
+							</div>
+							<div class="projects__icons">
+								<div class="project__icon">
+									<img
+										src="img/slider/slide-filter-icon-1.svg"
+										alt="slide-filter-icon-1"
+									/>
+								</div>
+								<div class="project__icon">
+									<img
+										src="img/slider/slide-filter-icon-2.svg"
+										alt="slide-filter-icon-2"
+									/>
+								</div>
+								<div class="project__icon">
+									<img
+										src="img/slider/slide-filter-icon-3.svg"
+										alt="slide-filter-icon-3"
+									/>
+								</div>
+								<div class="project__icon">
+									<img
+										src="img/slider/slide-filter-icon-4.svg"
+										alt="slide-filter-icon-4"
+									/>
+								</div>
+							</div>
+							<h2 class="project__title">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Voluptatibus, expedita.
+							</h2>
+							<div class="project__info">
+								<div class="project__button-next">&#8250;</div>
+								<div class="project__counter">002 / 004</div>
+							</div>
+						</div>
+						<div class="project__image">
+							<img src="img/slider/slide2.jpg" alt="image1" />
+						</div>
+					</div>
+				</section>
+				<section class="project">
+					<div class="project__bg">
+						<img src="img/slider/slide1.jpg" alt="bg" />
+					</div>
+					<div class="project__container">
+						<div class="project__content">
+							<div class="sticky__categories categories-sticky">
+								<div class="categories-sticky__button">
+									<img
+										src="img/slider/categories-icon.svg"
+										alt="categories icon"
+									/>
+									<span>Категории поиска</span>
+								</div>
+								<div class="categories-sticky__items">
+									<div class="categories-sticky__item">Все</div>
+									<div class="categories-sticky__item">Инжиниринг</div>
+									<div class="categories-sticky__item active">
+										Строительство
+									</div>
+									<div class="categories-sticky__item">Проектирование</div>
+									<div class="categories-sticky__item">Управление проектом</div>
+									<div class="categories-sticky__item">Ввод в эксплуатацию</div>
+									<div class="categories-sticky__item">ПНР</div>
+									<div class="categories-sticky__item">Подсадка модулей</div>
+									<div class="categories-sticky__item">
+										Обоснование инвестиций
+									</div>
+									<div class="categories-sticky__item">Обслуживание</div>
+									<div class="categories-sticky__item">АСУ ТП</div>
+									<div class="categories-sticky__item">Комплектация</div>
+									<div class="categories-sticky__item">Экспертиза</div>
+									<div class="categories-sticky__item">
+										Разработка документации
+									</div>
+									<div class="categories-sticky__item">
+										Поставка оборудования
+									</div>
+								</div>
+							</div>
+							<div class="projects__icons">
+								<div class="project__icon">
+									<img
+										src="img/slider/slide-filter-icon-1.svg"
+										alt="slide-filter-icon-1"
+									/>
+								</div>
+								<div class="project__icon">
+									<img
+										src="img/slider/slide-filter-icon-2.svg"
+										alt="slide-filter-icon-2"
+									/>
+								</div>
+								<div class="project__icon">
+									<img
+										src="img/slider/slide-filter-icon-3.svg"
+										alt="slide-filter-icon-3"
+									/>
+								</div>
+								<div class="project__icon">
+									<img
+										src="img/slider/slide-filter-icon-4.svg"
+										alt="slide-filter-icon-4"
+									/>
+								</div>
+							</div>
+							<h2 class="project__title">
+								Строительство комплекса производства СПГ в ТОР Надеждинская
+							</h2>
+							<div class="project__info">
+								<div class="project__button-next">&#8250;</div>
+								<div class="project__counter">003 / 004</div>
+							</div>
+						</div>
+						<div class="project__image">
+							<img src="img/slider/slide1.jpg" alt="image1" />
+						</div>
+					</div>
+				</section>
+				<section class="project">
+					<div class="project__bg">
+						<img src="img/slider/slide2.jpg" alt="bg2" />
+					</div>
+					<div class="project__container">
+						<div class="project__content">
+							<div class="sticky__categories categories-sticky">
+								<div class="categories-sticky__button">
+									<img
+										src="img/slider/categories-icon.svg"
+										alt="categories icon"
+									/>
+									<span>Категории поиска</span>
+								</div>
+								<div class="categories-sticky__items">
+									<div class="categories-sticky__item">Все</div>
+									<div class="categories-sticky__item">Инжиниринг</div>
+									<div class="categories-sticky__item active">
+										Строительство
+									</div>
+									<div class="categories-sticky__item">Проектирование</div>
+									<div class="categories-sticky__item">Управление проектом</div>
+									<div class="categories-sticky__item">Ввод в эксплуатацию</div>
+									<div class="categories-sticky__item">ПНР</div>
+									<div class="categories-sticky__item">Подсадка модулей</div>
+									<div class="categories-sticky__item">
+										Обоснование инвестиций
+									</div>
+									<div class="categories-sticky__item">Обслуживание</div>
+									<div class="categories-sticky__item">АСУ ТП</div>
+									<div class="categories-sticky__item">Комплектация</div>
+									<div class="categories-sticky__item">Экспертиза</div>
+									<div class="categories-sticky__item">
+										Разработка документации
+									</div>
+									<div class="categories-sticky__item">
+										Поставка оборудования
+									</div>
+								</div>
+							</div>
+							<div class="projects__icons">
+								<div class="project__icon">
+									<img
+										src="img/slider/slide-filter-icon-1.svg"
+										alt="slide-filter-icon-1"
+									/>
+								</div>
+								<div class="project__icon">
+									<img
+										src="img/slider/slide-filter-icon-2.svg"
+										alt="slide-filter-icon-2"
+									/>
+								</div>
+								<div class="project__icon">
+									<img
+										src="img/slider/slide-filter-icon-3.svg"
+										alt="slide-filter-icon-3"
+									/>
+								</div>
+								<div class="project__icon">
+									<img
+										src="img/slider/slide-filter-icon-4.svg"
+										alt="slide-filter-icon-4"
+									/>
+								</div>
+							</div>
+							<h2 class="project__title">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Voluptatibus, expedita.
+							</h2>
+							<div class="project__info">
+								<div class="project__button-next">&#8250;</div>
+								<div class="project__counter">004 / 004</div>
+							</div>
+						</div>
+						<div class="project__image">
+							<img src="img/slider/slide2.jpg" alt="image1" />
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer class="footer">
+				<div class="footer__container">
+					<a href="#" class="footer__logo"
+						><img src="img/logo.svg" alt="LNG Invest Project"
+					/></a>
+					<div class="footer__content">
+						<ul class="footer__list">
+							<li class="footer__item">
+								<a href="#" class="footer__link">О компании</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">Новости</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">Проекты</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">Вопрос - Ответ</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">Контакты</a>
+							</li>
+						</ul>
+						<div class="footer__info">
+							<div class="footer__time-block time-block-footer">
+								<div class="time-block-footer__days">Пн-Сб</div>
+								<div class="time-block-footer__time">9:00 — 20:00</div>
+							</div>
+							<div class="footer__phone-block phone-block-footer">
+								<div class="phone-block-footer__title">Тел.:</div>
+								<a href="tel:+74951396688" class="phone-block-footer__phone"
+									>+7 495 139-66-88</a
+								>
+							</div>
+							<div class="footer__mail-block mail-block-footer">
+								<div class="mail-block-footer__title">E-mail:</div>
+								<a
+									href="mailto:info@lnginvestproject.com"
+									class="mail-block-footer__mail"
+								>
+									info@lnginvestproject.com
+								</a>
+							</div>
+						</div>
+						<address class="footer__address address-footer">
+							<div class="address-footer__title">Адрес:</div>
+							<p class="address-footer__address">
+								115054, а/я 130, г. Москва, Космодамианская набережная, д. 52,
+								стр. 1А
+							</p>
+							<p class="address-footer__address">
+								614007, . Пермь, ул. Николая Островского, д. 59, этаж 5, кабинет
+								512
+							</p>
+						</address>
+					</div>
+				</div>
+
+				<div class="footer__license">
+					<p class="footer__license-text">
+						Copyright © 2024 LNG Invest Project All Rights ReservedDesign
+						5Dmedia
+					</p>
+				</div>
+				<div class="footer__decoration">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="875"
+						height="39"
+						viewBox="0 0 875 39"
+						fill="none"
+					>
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M874.608 39.0001C858.529 35.1101 839.066 18.7924 825.8 6.17544C817.2 -2.02456 803.7 -2.02476 795 5.97524C781.268 18.6866 761.08 35.0999 744.738 39.0001H874.608ZM512.428 39.0001C506.001 37.1915 498.894 32.7134 492.3 27.5753C478.7 16.9753 459.8 16.7755 446.1 27.2755C439.348 32.4237 431.955 37.0733 425.424 39.0001H512.428ZM39.0439 39.0001C33.7817 36.9413 27.8136 31.7041 24 27.9752C21.8 25.7752 18.2 25.7756 15.9 27.8756C11.9381 31.6689 5.77342 36.9544 0.400877 39.0001H39.0439Z"
+							fill="#1825AA"
+						/>
+					</svg>
+				</div>
+			</footer>
+		</div>
+	</body>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script src="js/index.js"></script>
+</html>
