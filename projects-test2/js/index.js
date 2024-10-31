@@ -47,14 +47,12 @@ document.querySelectorAll('.categories-project__button').forEach((button) => {
 document.addEventListener('scroll', function () {
 	const sections = document.querySelectorAll('.project');
 	let activeSection = null;
+	const scrollOffset = 0.5; // Смещение для задержки начала параллакса (0.2 — это 20%)
 
 	sections.forEach((section) => {
 		const rect = section.getBoundingClientRect();
 
-		if (
-			rect.top <= window.innerHeight / 1 &&
-			rect.bottom >= window.innerHeight / 1
-		) {
+		if (rect.top <= window.innerHeight && rect.bottom >= 0) {
 			activeSection = section;
 			section.classList.add('active');
 		} else {
@@ -65,14 +63,12 @@ document.addEventListener('scroll', function () {
 	if (activeSection) {
 		const sectionHeight = activeSection.offsetHeight;
 		const scrollPosition = window.scrollY - activeSection.offsetTop;
-		const scrollRatio = scrollPosition / sectionHeight;
+		const adjustedScrollPosition =
+			scrollPosition - sectionHeight * scrollOffset;
+		const scrollRatio = Math.max(0, adjustedScrollPosition / sectionHeight);
 
-		const bg = activeSection.querySelector('.project__bg');
-		const content = activeSection.querySelector('.project__content');
 		const image = activeSection.querySelector('.project__image');
 
-		bg.style.transform = `translateY(-${scrollRatio * 100}px)`;
-		content.style.transform = `translateY(-${scrollRatio * 200}px)`;
-		image.style.transform = `translateY(-${scrollRatio * 300}px)`;
+		image.style.transform = `translateY(-${scrollRatio * 650}px)`;
 	}
 });
