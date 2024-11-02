@@ -300,7 +300,6 @@ header.header {
 	align-items: center;
 	justify-content: center;
 	row-gap: 3rem;
-	flex-wrap: wrap;
 }
 .stats__block {
 	padding: 0 48px;
@@ -1175,6 +1174,11 @@ header.header {
 }
 .footer__link:hover {
 	opacity: 0.7;
+}
+@media (max-width: 1030px) {
+	.stats__container {
+		flex-wrap: wrap;
+	}
 }
 @media (max-width: 767.98px) {
 	header.header {
